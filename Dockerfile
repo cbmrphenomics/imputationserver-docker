@@ -1,4 +1,4 @@
-FROM genepi/cloudgene:v2.4.1
+FROM phenomics/cloudgene:v2.5.1
 
 MAINTAINER Sebastian Schoenherr <sebastian.schoenherr@i-med.ac.at>, Lukas Forer <lukas.forer@i-med.ac.at>
 
