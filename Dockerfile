@@ -26,5 +26,7 @@ ENV CLOUDGENE_SERVICE_NAME="Michigan Imputation Server"
 ENV CLOUDGENE_HELP_PAGE="http://imputationserver.readthedocs.io"
 ENV CLOUDGENE_REPOSITORY="/opt/cloudgene/apps.yaml"
 
+COPY custom_startup.sh /root/
+
 # run startup script to start Hadoop and Cloudgene
-CMD ["/usr/bin/startup"]
+CMD ["bash", "/root/custom_startup.sh"]
