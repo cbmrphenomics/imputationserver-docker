@@ -12,8 +12,8 @@ rm -rf /var/lib/apt/lists/*
 
 # Install R Packages
 RUN R -e "install.packages('RColorBrewer', repos = 'http://cran.rstudio.com' )"
-
-RUN R -e "source('https://bioconductor.org/biocLite.R' )" -e 'biocLite("geneplotter")'
+RUN R -e "install.packages('BiocInstaller', repos='https://bioconductor.org/packages/3.6/bioc')"
+RUN R -e 'BiocInstaller::biocLite("geneplotter")'
 
 # Add imputationserver specific pages
 ADD pages /opt/cloudgene/sample/pages
